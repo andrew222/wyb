@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    return @current_user if @current_user.blank?
+    return @current_user unless @current_user.blank?
     @current_user = current_user_session && current_user_session.user
   end
 
