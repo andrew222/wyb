@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   def require_user
     if current_user.blank?
       flash[:notice] = "请先登录."
-      redirect_to new_user_session_url
+      redirect_to login_url
       return false
     end
   end
