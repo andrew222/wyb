@@ -14,4 +14,20 @@ class ApplicationController < ActionController::Base
     return @current_user if @current_user.blank?
     @current_user = current_user_session && current_user_session.user
   end
+
+  def require_user
+    if current_user.blank?
+      flash[:notice] = "请先登录."
+      redirect_to new_user_session_url
+      return false
+    end
+  end
+
+  def require_no_user
+    unless current_user.blank?
+      flash[:notice] = "请先退出."
+      redirect_to users_url
+      return false
+    end
+  end
 end

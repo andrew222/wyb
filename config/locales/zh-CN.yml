@@ -1,0 +1,5 @@
+zh-CN:
+  actions:
+    save: "保存"
+    submit: "确定"
+    login: "登录"

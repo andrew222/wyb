@@ -20,4 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  actions:
+    save: "Save"
+    submit: "Submit"
+    login: "Login"
