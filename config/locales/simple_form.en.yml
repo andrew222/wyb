@@ -1,0 +1,6 @@
+en:
+  simple_form:
+    labels:
+      user_session:
+        email: "Email"
+        password: "Password"

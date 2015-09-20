@@ -1,0 +1,6 @@
+zh-CN:
+  simple_form:
+    labels:
+      user_session:
+        email: "邮箱"
+        password: "密码"
