@@ -3,3 +3,8 @@ zh-CN:
     save: "保存"
     submit: "确定"
     login: "登录"
+    logout: "退出"
+  shared:
+    profile: "个人信息"
+  notifications:
+    unread: "%{count}未读"

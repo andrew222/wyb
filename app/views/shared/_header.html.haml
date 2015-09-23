@@ -1,13 +1,21 @@
 %nav
   .nav-wrapper
-    = link_to "Waiyubang", "/"
+    = link_to 'Waiyubang', '/'
     %ul.right.hide-on-med-and-down
       - if current_user.blank?
-        %li= link_to t("actions.login"), login_path
+        %li= link_to t('actions.login'), login_path
       - else
+        %li{class: controller_name == 'contacts' ? 'active':''}
+          = link_to '#!', class: 'contacts-btn' do
+            %i.material-icons.center contacts
+        %li{class: controller_name == 'notifications' ? 'active':''}
+          = link_to notifications_path, class: 'announcement-btn' do
+            %i.material-icons.left announcement
+            - if current_user.unread_notifications_count > 0
+              %span.badge= t('notifications.unread', {count: current_user.unread_notifications_count})
         %li
-          = link_to "#!", class: "setting-dropdown-btn", data: {activates: "setting-dropdown"} do
-            %i.material-icons.right settings
+          = link_to '#!', class: 'setting-dropdown-btn', data: {activates: 'setting-dropdown'} do
+            %i.material-icons.center settings
           %ul.dropdown-content#setting-dropdown
-            %li= link_to t("shared.profile"), edit_user_path(current_user)
-            %li= link_to t("actions.logout"), logout_path
+            %li= link_to t('shared.profile'), edit_user_path(current_user)
+            %li= link_to t('actions.logout'), logout_path

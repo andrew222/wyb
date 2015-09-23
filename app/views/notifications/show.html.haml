@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @notification.title
+%p
+  %b Content:
+  = @notification.content
+%p
+  %b Sender:
+  = @notification.sender_id
+%p
+  %b Receiver:
+  = @notification.receiver_id
+
+= link_to 'Edit', edit_notification_path(@notification)
+\|
+= link_to 'Back', notifications_path

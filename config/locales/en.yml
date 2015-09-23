@@ -24,3 +24,8 @@ en:
     save: "Save"
     submit: "Submit"
     login: "Login"
+    logout: "Logout"
+  shared:
+    profile: "Profile"
+  notifications:
+    unread: "%{count} unread"
