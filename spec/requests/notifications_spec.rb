@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'shoulda/matchers'
 
 RSpec.describe "Notifications", type: :request do
   describe "GET /notifications" do

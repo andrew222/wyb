@@ -46,6 +46,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'quiet_assets'
   gem 'shoulda-matchers'
+  gem 'rails-erd'
 end
 
 group :development do

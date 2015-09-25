@@ -29,3 +29,12 @@ en:
     profile: "Profile"
   notifications:
     unread: "%{count} unread"
+  activerecord:
+    errors:
+      models:
+        notification:
+          attributes:
+            content:
+              blank: "can't be blank"
+            title:
+              blank: "can't be blank"
