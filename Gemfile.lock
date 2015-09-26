@@ -55,6 +55,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
+    database_cleaner (1.5.0)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     erubis (2.7.0)
@@ -221,6 +222,7 @@ DEPENDENCIES
   authlogic
   byebug
   coffee-rails (~> 4.1.0)
+  database_cleaner
   execjs
   haml-rails
   jbuilder (~> 2.0)

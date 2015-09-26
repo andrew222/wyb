@@ -6,6 +6,7 @@ zh-CN:
     logout: "退出"
   shared:
     profile: "个人信息"
+    language: "我的语言"
   notifications:
     unread: "%{count}未读"
   activerecord:
@@ -16,4 +17,8 @@ zh-CN:
             title:
               blank: "不能为空"
             content:
+              blank: "不能为空"
+        language:
+          attributes:
+            name:
               blank: "不能为空"

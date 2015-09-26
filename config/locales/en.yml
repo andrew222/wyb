@@ -27,6 +27,7 @@ en:
     logout: "Logout"
   shared:
     profile: "Profile"
+    language: "My Language"
   notifications:
     unread: "%{count} unread"
   activerecord:

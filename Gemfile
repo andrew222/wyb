@@ -47,6 +47,7 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'shoulda-matchers'
   gem 'rails-erd'
+  gem 'database_cleaner'
 end
 
 group :development do

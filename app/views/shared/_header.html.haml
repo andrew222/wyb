@@ -18,4 +18,5 @@
             %i.material-icons.center settings
           %ul.dropdown-content#setting-dropdown
             %li= link_to t('shared.profile'), edit_user_path(current_user)
+            %li= link_to t('shared.languages'), languages_path
             %li= link_to t('actions.logout'), logout_path
