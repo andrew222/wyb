@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'user_sessions#new'
+  root 'users#index'
   get '/login' => 'user_sessions#new', as: 'login'
   get '/logout' => 'user_sessions#destroy', as: 'logout'
 
