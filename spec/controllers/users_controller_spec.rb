@@ -73,4 +73,15 @@ RSpec.describe UsersController, type: :controller do
       end
     end
   end
+  describe "GET #search" do
+
+    it { should route(:get, "/users/search").to(action: :search) }
+
+    it "assigns filted users as @users" do
+      user = User.create!(valid_attributes)
+      @request.accept = "text/javascript"
+      get :search, {q: 'andrew'}
+      expect(assigns(:users)).to eq([user])
+    end
+  end
 end

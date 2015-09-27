@@ -1,21 +1,9 @@
-%h1 Listing users
+.search-filter.row
+  .title.col.l12.m12.s12 搜索
+  .search.col.l6.m6.s12
+    = text_field_tag "", "", class: "browser-default"
+  .filter.col.l6.m6.s12
+    = select_tag "", options_for_select(LanguageList::COMMON_LANGUAGES.sort_by!{ |x| x.name }.map(&:name)), class: "browser-default"
 
-%table
-  %thead
-    %tr
-      %th email
-      %th
-      %th
-      %th
-
-  %tbody
-    - @users.each do |user|
-      %tr
-        %td= user.email
-        %td= link_to 'Show', user
-        %td= link_to 'Edit', edit_user_path(user)
-        %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New User', new_user_path
+.users-list.row
+  = render partial: 'users/users_list', locals: {users: @users}

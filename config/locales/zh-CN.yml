@@ -1,4 +1,8 @@
 zh-CN:
+  date:
+    year: "年"
+    month: "月"
+    day: "日"
   actions:
     save: "保存"
     submit: "确定"
@@ -12,6 +16,11 @@ zh-CN:
   activerecord:
     errors:
       models:
+        user:
+          password:
+            too_short: "密码太短"
+          password_confirmation:
+            too_short: "密码太短"
         notification:
           attributes:
             title:

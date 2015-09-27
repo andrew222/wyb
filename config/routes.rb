@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :notifications
-  resources :users
+  resources :users do
+    collection do
+      get '/search' => "users#search", as: :search
+    end
+  end
   resources :user_sessions
   resources :languages
   # The priority is based upon order of creation: first created -> highest priority.

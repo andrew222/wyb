@@ -38,6 +38,9 @@ gem 'haml-rails'
 gem 'materialize-sass'
 gem 'material_icons'
 gem 'simple_form'
+gem 'language_list'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,6 +51,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'rails-erd'
   gem 'database_cleaner'
+  gem 'pry-doc'
 end
 
 group :development do

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :require_user, except: [:index, :new, :create]
+  before_action :require_user, except: [:index, :search, :new, :create]
   before_action :set_user, only: [:edit, :update, :destroy]
 
   def index
@@ -36,12 +36,19 @@ class UsersController < ApplicationController
       end
     end
   end
+
+  def search
+    keyword = params[:q] || ""
+    lanName = params[:lanName] || ""
+
+    @users = User.includes(:languages).references(:languages).where("users.email LIKE ? OR languages.name LIKE ?", "%#{keyword}%", "%#{lanName}%")
+  end
   private
     def set_user
       @user = User.find(params[:id])
     end
 
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
+      params.require(:user).permit(:email, :nickname, :first_name, :last_name, :avatar, :password, :password_confirmation, :born_at)
     end
 end
