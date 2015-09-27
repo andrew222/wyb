@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'users#index'
+  get '/signup' => 'users#new', as: 'signup'
   get '/login' => 'user_sessions#new', as: 'login'
   get '/logout' => 'user_sessions#destroy', as: 'logout'
 

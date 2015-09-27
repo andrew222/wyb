@@ -13,7 +13,7 @@
   = f.input :avatar, as: :file, class: "browser-default"
   = f.input :password
   = f.input :password_confirmation
-  = f.input :birthday, as: :date, order: [:year, :month, :day], use_month_names: (1..12).to_a, input_html: {class: "browser-default col l4 m4 s12"}
+  = f.input :birthday, as: :date, order: [:year, :month, :day], start_year: 1900, use_month_names: (1..12).to_a, input_html: {class: "browser-default col l4 m4 s12"}
   = f.input :born_at
   .actions
     = f.submit t('actions.save'), class: "waves-effect waves-light btn"
