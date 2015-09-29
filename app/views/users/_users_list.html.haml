@@ -2,14 +2,12 @@
   .card.row.col.l4.m6.s12
     .card-image.waves-effect.waves-block.waves-light
       = image_tag user.avatar.thumb.url, class: "activator", size: "50x50"
-      %ul.short-desc
-        %li= user.nickname
-        %li= user.language_names
-        %li= user.born_at
+      %span.short-desc= user.nickname
 
     .card-content
       %span.card-title.activator.grey-text.text-darken-4
-        %span= user.email
+        %span= user.language_names
+        %span= user.born_at
         %i.material-icons.right more_vert
       .actions
         = link_to "/friends/add" do
