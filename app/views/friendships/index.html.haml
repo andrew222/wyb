@@ -1,0 +1,20 @@
+%h1= t("friendship.title") 
+
+%table.friendships-list
+  %thead
+    %tr
+      %th= t('user.nickname')
+      %th= t('user.email')
+      %th= t('user.languages')
+      %th{colspan: 3}
+
+  %tbody
+    - @friends.each do |friend|
+      - friendship = current_user.friendships.find_by_friend_id(friend.id)
+      %tr{data: {fid: friendship.id}}
+        %td= friend.nickname
+        %td= friend.email
+        %td= friend.language_names
+        %td= link_to t('actions.show'), friend
+        %td= link_to t('actions.edit'), edit_friendship_path(friend)
+        %td= link_to t('actions.destroy'), friendship, :method => :delete, :data => { :confirm => 'Are you sure?' }, remote: true

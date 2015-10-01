@@ -4,7 +4,11 @@ zh-CN:
     month: "月"
     day: "日"
   actions:
+    edit: "编辑"
+    destroy: "删除"
+    show: "显示"
     save: "保存"
+    cancel: "取消"
     submit: "确定"
     login: "登录"
     signup: "注册"
@@ -12,8 +16,14 @@ zh-CN:
   shared:
     profile: "个人信息"
     language: "我的语言"
+  user:
+    nickname: "用户名"
+    email: "邮箱"
+    languages: "语言"
   notifications:
     unread: "%{count}未读"
+  friendship:
+    title: "我的好友"
   activerecord:
     errors:
       models:

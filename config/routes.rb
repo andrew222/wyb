@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :friendships do
+    member do
+      post 'add' => "friendships#add", as: :add
+    end
+  end
   resources :notifications
   resources :users do
     collection do

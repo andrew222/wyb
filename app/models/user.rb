@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
 
   has_many :languages, dependent: :destroy
 
+  has_many :friendships
+  has_many :friends, through: :friendships
+
   def unread_notifications_count
     self.unread_notifications.size
   end

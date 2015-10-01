@@ -6,8 +6,8 @@
         %li= link_to t('actions.login'), login_path
         %li= link_to t('actions.signup'), signup_path
       - else
-        %li{class: controller_name == 'contacts' ? 'active':''}
-          = link_to '#!', class: 'contacts-btn' do
+        %li{class: controller_name == 'friendships' ? 'active':''}
+          = link_to friendships_path, class: 'contacts-btn' do
             %i.material-icons.center contacts
         %li.notification{class: controller_name == 'notifications' ? 'active':''}
           = link_to notifications_path, class: 'announcement-btn' do

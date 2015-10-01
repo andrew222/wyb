@@ -1,6 +1,6 @@
 $(document).on 'change', '.search-filter select', () ->
   searchUsers()
-  
+
 window.searchUsers = () ->
   $searchBlock = $('.search-filter')
   lanName = $searchBlock.find("select option:selected").val()

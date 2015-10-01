@@ -10,7 +10,9 @@
         %span= user.born_at
         %i.material-icons.right more_vert
       .actions
-        = link_to "/friends/add" do
+        = link_to new_notification_path, remote: true do
+          %i.material-icons chat_bubble_outline
+        = link_to add_friendship_path(user), remote: true, method: 'post' do
           %i.material-icons grade
     .card-reveal
       .card-title.grey-text.text-darken-4
