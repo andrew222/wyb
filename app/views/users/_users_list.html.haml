@@ -1,5 +1,5 @@
 - users.each do |user|
-  .card.row.col.l4.m6.s12
+  .card.row.col.l4.m6.s12{data: {uid: user.id}}
     .card-image.waves-effect.waves-block.waves-light
       = image_tag user.avatar.thumb.url, class: "activator", size: "50x50"
       %span.short-desc= user.nickname
@@ -10,10 +10,11 @@
         %span= user.born_at
         %i.material-icons.right more_vert
       .actions
-        = link_to new_notification_path, remote: true do
-          %i.material-icons chat_bubble_outline
-        = link_to add_friendship_path(user), remote: true, method: 'post' do
-          %i.material-icons grade
+        - is_contact = current_user.is_contact?(user.id)
+        = link_to new_notification_path, remote: true, class: 'comment-btn' do
+          %i.fa.fa-comment.fa-lg
+        = link_to is_contact ? remove_friendship_path(user) : add_friendship_path(user), remote: true, method: 'post', class: 'favorite-btn' do
+          %i.fa.fa-lg{class:  is_contact ? "fa-heart" : "fa-heart-o"}
     .card-reveal
       .card-title.grey-text.text-darken-4
         %span= user.email

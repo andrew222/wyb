@@ -1,1 +1,2 @@
-alert("add js haml")
+var $userCard = $(".users-list .card[data-uid='" + #{@user_id} + "']")
+$userCard.find(".favorite-btn i").removeClass("fa-heart-o").addClass("fa-heart")

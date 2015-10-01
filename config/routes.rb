@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :friendships do
     member do
       post 'add' => "friendships#add", as: :add
+      post 'remove' => "friendships#remove", as: :remove
     end
   end
   resources :notifications

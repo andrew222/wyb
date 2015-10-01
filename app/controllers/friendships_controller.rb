@@ -9,7 +9,18 @@ class FriendshipsController < ApplicationController
   def add
     @friendship = current_user.friendships.build(friend_id: params[:id])
     unless @friendship.save
-      render js: "alert('failed')"
+      render js: "alert('找不到此用户')"
+    else
+      @user_id = @friendship.friend_id
+    end
+  end
+
+  def remove
+    @friendship = current_user.friendships.find_by_friend_id(params[:id])
+    unless @friendship.destroy
+      render js: "alert('找不到此用户')"
+    else
+      @user_id = @friendship.friend_id
     end
   end
 

@@ -1,0 +1,86 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddAvatarToUsers	db/migrate/20150927042900_add_avatar_to_users.rb	/^class AddAvatarToUsers < ActiveRecord::Migration$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Waiyubang
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+AvatarUploader	app/uploaders/avatar_uploader.rb	/^class AvatarUploader < CarrierWave::Uploader::Base$/;"	c
+CreateLanguages	db/migrate/20150926031554_create_languages.rb	/^class CreateLanguages < ActiveRecord::Migration$/;"	c
+CreateNotifications	db/migrate/20150921141444_create_notifications.rb	/^class CreateNotifications < ActiveRecord::Migration$/;"	c
+CreateUsers	db/migrate/20150920012557_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
+Friendship	app/models/friendship.rb	/^class Friendship < ActiveRecord::Base$/;"	c
+FriendshipsController	app/controllers/friendships_controller.rb	/^class FriendshipsController < ApplicationController$/;"	c
+Language	app/models/language.rb	/^class Language < ActiveRecord::Base$/;"	c
+LanguagesController	app/controllers/languages_controller.rb	/^class LanguagesController < ApplicationController$/;"	c
+LanguagesHelper	app/helpers/languages_helper.rb	/^module LanguagesHelper$/;"	m
+Notification	app/models/notification.rb	/^class Notification < ActiveRecord::Base$/;"	c
+NotificationsController	app/controllers/notifications_controller.rb	/^class NotificationsController < ApplicationController$/;"	c
+NotificationsHelper	app/helpers/notifications_helper.rb	/^module NotificationsHelper$/;"	m
+PostsController	app/controllers/posts_controller.rb	/^class PostsController < ApplicationController$/;"	c
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UserSession	app/models/user_session.rb	/^class UserSession < Authlogic::Session::Base$/;"	c
+UserSessionsController	app/controllers/user_sessions_controller.rb	/^class UserSessionsController < ApplicationController$/;"	c
+UserSessionsHelper	app/helpers/user_sessions_helper.rb	/^module UserSessionsHelper$/;"	m
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
+Waiyubang	config/application.rb	/^module Waiyubang$/;"	m
+add	app/controllers/friendships_controller.rb	/^  def add$/;"	f	class:FriendshipsController
+change	db/migrate/20150920012557_create_users.rb	/^  def change$/;"	f	class:CreateUsers
+change	db/migrate/20150921141444_create_notifications.rb	/^  def change$/;"	f	class:CreateNotifications
+change	db/migrate/20150926031554_create_languages.rb	/^  def change$/;"	f	class:CreateLanguages
+change	db/migrate/20150927042900_add_avatar_to_users.rb	/^  def change$/;"	f	class:AddAvatarToUsers
+create	app/controllers/languages_controller.rb	/^  def create$/;"	f	class:LanguagesController
+create	app/controllers/notifications_controller.rb	/^  def create$/;"	f	class:NotificationsController
+create	app/controllers/posts_controller.rb	/^  def create$/;"	f	class:PostsController
+create	app/controllers/user_sessions_controller.rb	/^  def create$/;"	f	class:UserSessionsController
+create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
+current_user	app/controllers/application_controller.rb	/^  def current_user$/;"	f	class:ApplicationController
+current_user_session	app/controllers/application_controller.rb	/^  def current_user_session$/;"	f	class:ApplicationController
+destroy	app/controllers/friendships_controller.rb	/^  def destroy$/;"	f	class:FriendshipsController
+destroy	app/controllers/languages_controller.rb	/^  def destroy$/;"	f	class:LanguagesController
+destroy	app/controllers/notifications_controller.rb	/^  def destroy$/;"	f	class:NotificationsController
+destroy	app/controllers/posts_controller.rb	/^  def destroy$/;"	f	class:PostsController
+destroy	app/controllers/user_sessions_controller.rb	/^  def destroy$/;"	f	class:UserSessionsController
+edit	app/controllers/notifications_controller.rb	/^  def edit$/;"	f	class:NotificationsController
+edit	app/controllers/posts_controller.rb	/^  def edit$/;"	f	class:PostsController
+edit	app/controllers/users_controller.rb	/^  def edit$/;"	f	class:UsersController
+extension_white_list	app/uploaders/avatar_uploader.rb	/^  def extension_white_list$/;"	f	class:AvatarUploader
+friendship_params	app/controllers/friendships_controller.rb	/^    def friendship_params$/;"	f	class:FriendshipsController
+index	app/controllers/friendships_controller.rb	/^  def index$/;"	f	class:FriendshipsController
+index	app/controllers/languages_controller.rb	/^  def index$/;"	f	class:LanguagesController
+index	app/controllers/notifications_controller.rb	/^  def index$/;"	f	class:NotificationsController
+index	app/controllers/posts_controller.rb	/^  def index$/;"	f	class:PostsController
+index	app/controllers/users_controller.rb	/^  def index$/;"	f	class:UsersController
+is_contact?	app/models/user.rb	/^  def is_contact?(user_id)$/;"	f	class:User
+language_names	app/models/user.rb	/^  def language_names$/;"	f	class:User
+language_params	app/controllers/languages_controller.rb	/^    def language_params$/;"	f	class:LanguagesController
+new	app/controllers/languages_controller.rb	/^  def new$/;"	f	class:LanguagesController
+new	app/controllers/notifications_controller.rb	/^  def new$/;"	f	class:NotificationsController
+new	app/controllers/posts_controller.rb	/^  def new$/;"	f	class:PostsController
+new	app/controllers/user_sessions_controller.rb	/^  def new$/;"	f	class:UserSessionsController
+new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
+notification_params	app/controllers/notifications_controller.rb	/^    def notification_params$/;"	f	class:NotificationsController
+post_params	app/controllers/posts_controller.rb	/^    def post_params$/;"	f	class:PostsController
+remove	app/controllers/friendships_controller.rb	/^  def remove$/;"	f	class:FriendshipsController
+require_no_user	app/controllers/application_controller.rb	/^  def require_no_user$/;"	f	class:ApplicationController
+require_user	app/controllers/application_controller.rb	/^  def require_user$/;"	f	class:ApplicationController
+search	app/controllers/users_controller.rb	/^  def search$/;"	f	class:UsersController
+set_friend	app/controllers/friendships_controller.rb	/^    def set_friend$/;"	f	class:FriendshipsController
+set_language	app/controllers/languages_controller.rb	/^    def set_language$/;"	f	class:LanguagesController
+set_notification	app/controllers/notifications_controller.rb	/^    def set_notification$/;"	f	class:NotificationsController
+set_post	app/controllers/posts_controller.rb	/^    def set_post$/;"	f	class:PostsController
+set_user	app/controllers/users_controller.rb	/^    def set_user$/;"	f	class:UsersController
+show	app/controllers/notifications_controller.rb	/^  def show$/;"	f	class:NotificationsController
+show	app/controllers/posts_controller.rb	/^  def show$/;"	f	class:PostsController
+store_dir	app/uploaders/avatar_uploader.rb	/^  def store_dir$/;"	f	class:AvatarUploader
+unread_notifications_count	app/models/user.rb	/^  def unread_notifications_count$/;"	f	class:User
+update	app/controllers/notifications_controller.rb	/^  def update$/;"	f	class:NotificationsController
+update	app/controllers/posts_controller.rb	/^  def update$/;"	f	class:PostsController
+update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
+user_params	app/controllers/users_controller.rb	/^    def user_params$/;"	f	class:UsersController
+user_session_params	app/controllers/user_sessions_controller.rb	/^    def user_session_params$/;"	f	class:UserSessionsController

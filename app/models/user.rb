@@ -18,4 +18,8 @@ class User < ActiveRecord::Base
   def language_names
     self.languages.map(&:name).join(" ")
   end
+
+  def is_contact?(user_id)
+    !self.friendships.find_by_friend_id(user_id).blank?
+  end
 end
