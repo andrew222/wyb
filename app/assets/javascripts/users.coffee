@@ -1,6 +1,13 @@
 $(document).on 'change', '.search-filter select', () ->
   searchUsers()
 
+$(document).on 'click', '.comment-btn', () ->
+  $.ajax
+    method: "GET"
+    url: "/notifications/new"
+    dataType: "script"
+    data: {uid: $(this).parents(".card").data("uid")}
+
 window.searchUsers = () ->
   $searchBlock = $('.search-filter')
   lanName = $searchBlock.find("select option:selected").val()

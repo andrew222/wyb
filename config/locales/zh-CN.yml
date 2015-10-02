@@ -20,8 +20,10 @@ zh-CN:
     nickname: "用户名"
     email: "邮箱"
     languages: "语言"
-  notifications:
+  notification:
     unread: "%{count}未读"
+    index:
+      title: "我的消息"
   friendship:
     title: "我的好友"
   activerecord:

@@ -16,7 +16,7 @@ class NotificationsController < ApplicationController
 
   # GET /notifications/new
   def new
-    @notification = Notification.new
+    @notification = Notification.new(receiver_id: params[:uid])
   end
 
   # GET /notifications/1/edit

@@ -1,4 +1,4 @@
-%h1 Listing notifications
+%h1= t("notification.index.title")
 
 %table
   %thead
@@ -6,7 +6,6 @@
       %th Title
       %th Content
       %th Sender
-      %th Receiver
       %th
       %th
       %th
@@ -16,8 +15,7 @@
       %tr
         %td= notification.title
         %td= notification.content
-        %td= notification.sender_id
-        %td= notification.receiver_id
+        %td= notification.sender.nickname
         %td= link_to 'Show', notification
         %td= link_to 'Edit', edit_notification_path(notification)
         %td= link_to 'Destroy', notification, :method => :delete, :data => { :confirm => 'Are you sure?' }
