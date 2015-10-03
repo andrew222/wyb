@@ -7,10 +7,10 @@
         %li= link_to t('actions.signup'), signup_path
       - else
         %li{class: controller_name == 'friendships' ? 'active':''}
-          = link_to friendships_path, class: 'contacts-btn' do
+          = link_to friendships_path, class: 'contacts-btn tooltipped', data: {position: 'bottom', delay: 10, tooltip: t('shared.friendship')} do
             %i.material-icons.center contacts
         %li.notification{class: controller_name == 'notifications' ? 'active':''}
-          = link_to notifications_path, class: 'announcement-btn' do
+          = link_to notifications_path, class: 'announcement-btn tooltipped', data: {position: 'bottom', delay: 10, tooltip: t('shared.notification')} do
             %i.material-icons.left announcement
             - if current_user.unread_notifications_count > 0
               %span.badge.new.unread= current_user.unread_notifications_count
@@ -18,6 +18,12 @@
           = link_to 'javascript:void(0)', class: 'setting-dropdown-btn', data: {activates: 'setting-dropdown'} do
             %i.material-icons.center settings
           %ul.dropdown-content#setting-dropdown
-            %li= link_to t('shared.profile'), edit_user_path(current_user)
-            %li= link_to t('shared.languages'), languages_path
-            %li= link_to t('actions.logout'), logout_path
+            %li
+              = link_to edit_user_path(current_user), class: 'tooltipped', data: {position: 'bottom', delay: 10, tooltip: t('shared.profile')} do
+                %i.fa.fa-user.fa-lg
+            %li
+              = link_to languages_path, class: 'tooltipped', data: {position: 'bottom', delay: 10, tooltip: t('shared.language')} do
+                %i.fa.fa-language.fa-lg
+            %li
+              = link_to logout_path, class: 'tooltipped', data: {position: 'bottom', delay: 10, tooltip: t('actions.logout')} do
+                %i.fa.fa-sign-out.fa-lg

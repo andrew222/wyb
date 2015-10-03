@@ -1,6 +1,16 @@
 zh-CN:
   simple_form:
     labels:
-      user_session:
+      defaults:
         email: "邮箱"
         password: "密码"
+        password_confirmation: "确认密码"
+      user_session:
+      user:
+        email: "邮箱"
+        nickname: "用户名"
+        first_name: "名字"
+        last_name: "姓氏"
+        avatar: "头像"
+        birthday: "出生年月日"
+        born_at: "出生地"

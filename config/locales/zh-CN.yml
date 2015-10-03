@@ -16,6 +16,8 @@ zh-CN:
   shared:
     profile: "个人信息"
     language: "我的语言"
+    friendship: "我的好友"
+    notification: "我的消息"
   user:
     nickname: "用户名"
     email: "邮箱"
