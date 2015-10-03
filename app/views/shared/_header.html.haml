@@ -15,7 +15,7 @@
             - if current_user.unread_notifications_count > 0
               %span.badge.new.unread= current_user.unread_notifications_count
         %li
-          = link_to '#!', class: 'setting-dropdown-btn', data: {activates: 'setting-dropdown'} do
+          = link_to 'javascript:void(0)', class: 'setting-dropdown-btn', data: {activates: 'setting-dropdown'} do
             %i.material-icons.center settings
           %ul.dropdown-content#setting-dropdown
             %li= link_to t('shared.profile'), edit_user_path(current_user)
