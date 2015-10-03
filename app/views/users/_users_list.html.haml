@@ -1,22 +1,23 @@
 - users.each do |user|
-  .card.row.col.l4.m6.s12{data: {uid: user.id}}
-    .card-image.waves-effect.waves-block.waves-light
-      = image_tag user.avatar.thumb.url, class: "activator", size: "50x50"
-      %span.short-desc= user.nickname
+  .user-block.row.col.l4.m6.s12
+    .card.col.s12{data: {uid: user.id}}
+      .card-image.waves-effect.waves-block.waves-light
+        = image_tag user.avatar.thumb.url, class: "activator", size: "50x50"
+        %span.short-desc= user.nickname
 
-    .card-content
-      %span.card-title.activator.grey-text.text-darken-4
-        %span= user.language_names
-        %span= user.born_at
-        %i.material-icons.right more_vert
-      .actions
-        - is_contact = current_user.is_contact?(user.id)
-        = link_to "javascript:void(0)", class: 'comment-btn' do
-          %i.fa.fa-comment.fa-lg
-        = link_to is_contact ? remove_friendship_path(user) : add_friendship_path(user), remote: true, method: 'post', class: 'favorite-btn' do
-          %i.fa.fa-lg{class:  is_contact ? "fa-heart" : "fa-heart-o"}
-    .card-reveal
-      .card-title.grey-text.text-darken-4
-        %span= user.email
-        %i.material-icons.right close
-        %p.info
+      .card-content
+        %span.card-title.activator.grey-text.text-darken-4
+          %span= user.language_names
+          %span= user.born_at
+          %i.material-icons.right more_vert
+        .actions
+          - is_contact = current_user.blank? ? false : current_user.is_contact?(user.id)
+          = link_to "javascript:void(0)", class: 'comment-btn' do
+            %i.fa.fa-comment.fa-lg
+          = link_to is_contact ? remove_friendship_path(user) : add_friendship_path(user), remote: true, method: 'post', class: 'favorite-btn' do
+            %i.fa.fa-lg{class:  is_contact ? "fa-heart" : "fa-heart-o"}
+      .card-reveal
+        .card-title.grey-text.text-darken-4
+          %span= user.email
+          %i.material-icons.right close
+          %p.info
