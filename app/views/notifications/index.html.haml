@@ -1,19 +1,12 @@
-%h1= t("notification.index.title")
+%h1= t("notification.index.send_to_me")
 
-%table
-  %thead
-    %tr
-      %th= t("simple_form.labels.notification.title")
-      %th= t("simple_form.labels.notification.content")
-      %th= t("simple_form.labels.notification.sender")
-      %th{colspan: 3}
+= render partial: "notification_list", locals: { notifications: @send_to_me, type: "send_to_me" }
 
-  %tbody
-    - @notifications.each do |notification|
-      %tr
-        %td= notification.title
-        %td= notification.content
-        %td= notification.sender.nickname
-        %td= link_to t('actions.show'), notification
-        %td= link_to t('actions.edit'), edit_notification_path(notification)
-        %td= link_to t('actions.destroy'), notification, method: :delete, data: { confirm:  t('actions.destroy_confirmation') }
+%h1= t("notification.index.send_by_me")
+
+- unless @send_by_me
+  = render partial: "notification_list", locals: { notifications: @send_by_me, type: "send_by_me" }
+- else
+  .block
+    %span= t("notification.no_send_by_me")
+    %span= link_to t("notification.action.new"), new_notification_path, remote: true
