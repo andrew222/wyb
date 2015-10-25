@@ -14,3 +14,6 @@ zh-CN:
         avatar: "头像"
         birthday: "出生年月日"
         born_at: "出生地"
+      language:
+        name: "名称"
+        experience: "使用年限"

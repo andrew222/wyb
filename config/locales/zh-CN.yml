@@ -6,6 +6,7 @@ zh-CN:
   actions:
     edit: "编辑"
     destroy: "删除"
+    destroy_confirmation: "确认删除"
     show: "显示"
     save: "保存"
     cancel: "取消"
@@ -28,6 +29,12 @@ zh-CN:
       title: "我的消息"
   friendship:
     title: "我的好友"
+  language:
+    title:
+      index: "我的语言"
+      new: "创建新语言"
+      add: "添加语言"
+      edit: "编辑语言"
   activerecord:
     errors:
       models:
