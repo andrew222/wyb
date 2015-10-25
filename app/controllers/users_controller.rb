@@ -16,9 +16,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.birthday = translate_birthday(user_params["birthday(1i)"], user_params["birthday(2i)"], user_params["birthday(3i)"])
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user }
+        format.html { redirect_to root_path }
       else
         format.html { render :new }
       end
@@ -31,9 +32,9 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    debugger
+    birthday = translate_birthday(user_params["birthday(1i)"], user_params["birthday(2i)"], user_params["birthday(3i)"])
     respond_to do |format|
-      if @user.update({nickname: user_params[:nickname], first_name: user_params[:first_name], last_name: user_params[:last_name], avatar: user_params[:avatar], birthday: user_params[:birthday], born_at: user_params[:born_at]})
+      if @user.update({nickname: user_params[:nickname], first_name: user_params[:first_name], last_name: user_params[:last_name], avatar: user_params[:avatar], birthday: birthday, born_at: user_params[:born_at]})
         format.html { redirect_to users_path }
       else
         flash[:notice] = "不能更新个人信息."
@@ -55,5 +56,9 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:email, :nickname, :first_name, :last_name, :avatar, :password, :password_confirmation, :birthday, :born_at)
+    end
+
+    def translate_birthday(year="2015", month="11", day="25")
+      return "#{year}-#{month}-#{day}".to_date
     end
 end
