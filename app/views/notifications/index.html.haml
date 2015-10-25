@@ -3,12 +3,10 @@
 %table
   %thead
     %tr
-      %th Title
-      %th Content
-      %th Sender
-      %th
-      %th
-      %th
+      %th= t("simple_form.labels.notification.title")
+      %th= t("simple_form.labels.notification.content")
+      %th= t("simple_form.labels.notification.sender")
+      %th{colspan: 3}
 
   %tbody
     - @notifications.each do |notification|
@@ -16,10 +14,6 @@
         %td= notification.title
         %td= notification.content
         %td= notification.sender.nickname
-        %td= link_to 'Show', notification
-        %td= link_to 'Edit', edit_notification_path(notification)
-        %td= link_to 'Destroy', notification, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Notification', new_notification_path
+        %td= link_to t('actions.show'), notification
+        %td= link_to t('actions.edit'), edit_notification_path(notification)
+        %td= link_to t('actions.destroy'), notification, method: :delete, data: { confirm:  t('actions.destroy_confirmation') }

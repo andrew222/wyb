@@ -16,5 +16,4 @@
         %td= friend.email
         %td= friend.language_names
         %td= link_to t('actions.show'), friend
-        %td= link_to t('actions.edit'), edit_friendship_path(friend)
         %td= link_to t('actions.destroy'), friendship, :method => :delete, :data => { :confirm => 'Are you sure?' }, remote: true

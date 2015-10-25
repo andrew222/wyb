@@ -17,3 +17,7 @@ zh-CN:
       language:
         name: "名称"
         experience: "使用年限"
+      notification:
+        title: "标题"
+        content: "内容"
+        sender: "发送者"

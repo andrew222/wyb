@@ -12,6 +12,8 @@ class NotificationsController < ApplicationController
   # GET /notifications/1
   # GET /notifications/1.json
   def show
+    @notification.status = "read"
+    @notification.save
   end
 
   # GET /notifications/new
@@ -21,6 +23,13 @@ class NotificationsController < ApplicationController
 
   # GET /notifications/1/edit
   def edit
+    if @notification.sender == current_user
+      if @notification.update(notification_params)
+        render :index
+      else
+        render :edit
+      end
+    end
   end
 
   # POST /notifications

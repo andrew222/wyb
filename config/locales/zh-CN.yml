@@ -11,6 +11,7 @@ zh-CN:
     save: "保存"
     cancel: "取消"
     agree: "同意"
+    back: "返回"
     submit: "确定"
     login: "登录"
     signup: "注册"
@@ -28,6 +29,8 @@ zh-CN:
       edit: "编辑"
   notification:
     unread: "%{count}未读"
+    title:
+      edit: "修改"
     index:
       title: "我的消息"
   friendship:

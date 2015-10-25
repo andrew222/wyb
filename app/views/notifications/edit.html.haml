@@ -1,7 +1,5 @@
-%h1 Editing notification
+%h1= t("notification.title.edit")
 
 = render 'form'
 
-= link_to 'Show', @notification
-\|
-= link_to 'Back', notifications_path
+= link_to t('actions.back'), notifications_path, class: "waves-effect waves-light btn"
