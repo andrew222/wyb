@@ -7,10 +7,3 @@
 
 .users-list.row
   = render partial: 'users/users_list', locals: {users: @users}
-#notification.modal.modal-fixed-footer.new-notification-popup
-  .modal-content
-    %h4.title= t("notification.new")
-  .modal-footer
-    .actions
-      = button_tag t('actions.cancel'), class: "modal-action modal-close waves-effect waves-green btn-flat"
-      = button_tag t('actions.save'), class: "modal-action save-btn waves-effect waves-green btn-flat"
