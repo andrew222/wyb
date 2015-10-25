@@ -3,7 +3,11 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :destroy]
 
   def index
-    @users = User.all.order("created_at desc")
+    users = User.all.order("created_at desc")
+    unless current_user.blank?
+      users = users.where.not(id: current_user.id)
+    end
+    @users = users
   end
 
   def new
@@ -27,12 +31,13 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+    debugger
     respond_to do |format|
-      if @user.update(user_params)
-        redirect_to users_path
+      if @user.update({nickname: user_params[:nickname], first_name: user_params[:first_name], last_name: user_params[:last_name], avatar: user_params[:avatar], birthday: user_params[:birthday], born_at: user_params[:born_at]})
+        format.html { redirect_to users_path }
       else
         flash[:notice] = "不能更新个人信息."
-        render :edit
+        format.html { render :edit }
       end
     end
   end
@@ -49,6 +54,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:email, :nickname, :first_name, :last_name, :avatar, :password, :password_confirmation, :born_at)
+      params.require(:user).permit(:email, :nickname, :first_name, :last_name, :avatar, :password, :password_confirmation, :birthday, :born_at)
     end
 end

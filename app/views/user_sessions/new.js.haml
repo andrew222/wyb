@@ -1,0 +1,5 @@
+var $form = $("#{escape_javascript(render partial: "form", object: @user)}")
+var $modal = $(".modal.shared")
+$modal.find("h4.header").html("#{I18n.t('actions.login')}")
+$modal.find("p.content").html($form)
+$modal.openModal()
