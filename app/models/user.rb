@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   has_many :friendships
   has_many :friends, through: :friendships
 
+  scope :exclude, lambda{|uid| where.not(id: uid).order("LOWER(nickname) ASC")}
+
   def unread_notifications_count
     self.unread_notifications.size
   end

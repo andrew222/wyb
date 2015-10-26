@@ -35,7 +35,7 @@ zh-CN:
     index:
       send_to_me: "发给我的消息"
       send_by_me: "我发送的消息"
-    no_send_by_me: "还没有发送过消息。赶快给好友发个消息吧。"
+    no_send_by_me: "还没有发送过消息。赶快给发个消息吧。"
     action:
       new: "发送新消息"
   friendship:
