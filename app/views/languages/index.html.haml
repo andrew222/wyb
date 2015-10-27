@@ -12,8 +12,7 @@
       %tr
         %td= language.name
         %td= language.experience
-        %td= link_to t('actions.show'), language
-        %td= link_to t('actions.edit'), edit_language_path(language)
+        %td= image_tag language.certificate.thumb.url
         %td= link_to t('actions.destroy'), language, :method => :delete, :data => { :confirm => t("actions.destroy_confirmation") }
 
 %br

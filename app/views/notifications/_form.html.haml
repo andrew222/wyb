@@ -13,5 +13,5 @@
   - else
     .input.string.required.notification_receiver
       %label.string.required= t("simple_form.labels.notification.receiver")
-      = select_tag "notification[receiver_id]", options_for_select(User.exclude(current_user.id).pluck(:nickname, :id))
+      = select_tag "notification[receiver_id]", options_for_select(User.exclude(current_user.id).pluck(:nickname, :id)), class: "browser-default"
   = button_tag t("actions.save"), class: "waves-effect waves-light btn"

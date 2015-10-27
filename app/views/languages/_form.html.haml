@@ -6,7 +6,8 @@
         - @language.errors.full_messages.each do |msg|
           %li= msg
 
-  = f.input :name
+  = f.input :name, as: :select, collection: LanguageList::COMMON_LANGUAGES.sort_by!{ |x| x.name }.map(&:name), input_html: { class: "browser-default" }
   = f.input :experience, as: :string
+  = f.input :certificate, as: :file, class: "browser-default"
   .actions
     = button_tag t('actions.save'), class: "waves-effect waves-light btn"
