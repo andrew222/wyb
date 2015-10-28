@@ -44,6 +44,7 @@ gem 'mini_magick'
 gem 'font-awesome-rails'
 gem 'thin'
 gem 'jquery-turbolinks'
+gem 'magnific-popup-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

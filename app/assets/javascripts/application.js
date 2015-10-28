@@ -15,4 +15,6 @@
 //= require jquery_ujs
 //= require materialize-sprockets
 //= require turbolinks
+//= require magnific-popup
+//= require home
 //= require_tree .
