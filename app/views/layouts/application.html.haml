@@ -16,3 +16,11 @@
         %h4.header
         %p.content
     .footer-container
+    - current_user_id = current_user.try(:id) || ""
+    :javascript
+      $(document).ready(function(){
+        if("#{current_user_id}" != "") {
+          setInterval(update, 300000);
+        }
+        setInterval(onlines, 2000);
+      })

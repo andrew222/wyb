@@ -12,8 +12,8 @@
           %i.material-icons.right more_vert
         .actions
           - is_contact = current_user.blank? ? false : current_user.is_contact?(user.id)
-          = link_to "javascript:void(0)", class: 'comment-btn' do
-            %i.fa.fa-comment.fa-lg
+          = link_to "javascript:void(0)", class: 'comment-btn', data: {name: user.nickname} do
+            %i.fa.fa-lg{class: user.online? ? "fa-comment" : "fa-comment-o"}
           = link_to is_contact ? remove_friendship_path(user) : add_friendship_path(user), remote: true, method: 'post', class: 'favorite-btn' do
             %i.fa.fa-lg{class:  is_contact ? "fa-heart" : "fa-heart-o"}
       .card-reveal

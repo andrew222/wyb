@@ -1,7 +1,7 @@
 $(document).on 'change', '.search-filter select', () ->
   searchUsers()
 
-$(document).on 'click', '.comment-btn', () ->
+$(document).on 'click', '.comment-btn .fa-comment-o', () ->
   $.ajax
     method: "GET"
     url: "/notifications/new"

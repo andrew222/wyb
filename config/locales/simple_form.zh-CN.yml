@@ -17,6 +17,7 @@ zh-CN:
       language:
         name: "名称"
         experience: "使用年限"
+        certificate: "证书"
       notification:
         title: "标题"
         content: "内容"

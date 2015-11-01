@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new', as: 'signup'
   get '/login' => 'user_sessions#new', as: 'login'
   get '/logout' => 'user_sessions#destroy', as: 'logout'
+  get '/update_status' => 'pages#update_status', as: 'update_status'
+  get '/onlines' => 'pages#onlines', as: 'onlines'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
