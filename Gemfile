@@ -1,4 +1,4 @@
-source 'https://ruby.taobao.org'
+source 'https://rubygems.org/'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -30,7 +30,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -42,9 +42,10 @@ gem 'language_list'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'font-awesome-rails'
-gem 'thin'
+#gem 'thin'
 gem 'jquery-turbolinks'
 gem 'magnific-popup-rails'
+gem 'private_pub'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -56,6 +57,10 @@ group :development, :test do
   gem 'rails-erd'
   gem 'database_cleaner'
   gem 'pry-doc'
+  gem 'capistrano'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
 end
 
 group :development do
