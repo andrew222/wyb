@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 
   has_many :friendships
   has_many :friends, through: :friendships
+  has_many :channels, foreign_key: :sender_id
 
   scope :exclude, lambda{|uid| where.not(id: uid).order("LOWER(nickname) ASC")}
   scope :onlines, -> {where("last_online_time >= ? OR last_request_at >= ?", Time.now - 5.minute, Time.now - 5.minute).order("LOWER(nickname) ASC")}

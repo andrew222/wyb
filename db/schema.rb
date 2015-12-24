@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151026143150) do
+ActiveRecord::Schema.define(version: 20151224065403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "channels", force: :cascade do |t|
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "chat_messages", force: :cascade do |t|
+    t.text     "message"
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.integer  "channel_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "friendships", force: :cascade do |t|
     t.integer  "user_id"
@@ -68,6 +84,7 @@ ActiveRecord::Schema.define(version: 20151026143150) do
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
     t.string   "avatar"
+    t.date     "last_online_time"
   end
 
 end

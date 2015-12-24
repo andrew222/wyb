@@ -17,4 +17,6 @@
 //= require turbolinks
 //= require magnific-popup
 //= require home
+//= require faye
+//= require channel
 //= require_tree .

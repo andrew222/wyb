@@ -9,6 +9,12 @@ AddAvatarToUsers	db/migrate/20150927042900_add_avatar_to_users.rb	/^class AddAva
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Waiyubang
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Channel	app/models/channel.rb	/^class Channel < ActiveRecord::Base$/;"	c
+ChannelsController	app/controllers/channels_controller.rb	/^class ChannelsController < ApplicationController$/;"	c
+ChatMessage	app/models/chat_message.rb	/^class ChatMessage < ActiveRecord::Base$/;"	c
+ChatsController	app/controllers/chat_controller.rb	/^class ChatsController  < FayeRails::Controller$/;"	c
+ChatsController	app/controllers/realtime/chat_controller.rb	/^class ChatsController  < FayeRails::Controller$/;"	c
+ChatsController	app/controllers/realtime/chats_controller.rb	/^class ChatsController < FayeRails::Controller$/;"	c
 CreateLanguages	db/migrate/20150926031554_create_languages.rb	/^class CreateLanguages < ActiveRecord::Migration$/;"	c
 CreateNotifications	db/migrate/20150921141444_create_notifications.rb	/^class CreateNotifications < ActiveRecord::Migration$/;"	c
 CreateUsers	db/migrate/20150920012557_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
@@ -18,6 +24,7 @@ LanguagesHelper	app/helpers/languages_helper.rb	/^module LanguagesHelper$/;"	m
 Notification	app/models/notification.rb	/^class Notification < ActiveRecord::Base$/;"	c
 NotificationsHelper	app/helpers/notifications_helper.rb	/^module NotificationsHelper$/;"	m
 PostsController	app/controllers/posts_controller.rb	/^class PostsController < ApplicationController$/;"	c
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
 UserSession	app/models/user_session.rb	/^class UserSession < Authlogic::Session::Base$/;"	c
 UserSessionsController	app/controllers/user_sessions_controller.rb	/^class UserSessionsController < ApplicationController$/;"	c
 UserSessionsHelper	app/helpers/user_sessions_helper.rb	/^module UserSessionsHelper$/;"	m
@@ -28,6 +35,7 @@ change	db/migrate/20150920012557_create_users.rb	/^  def change$/;"	f	class:Crea
 change	db/migrate/20150921141444_create_notifications.rb	/^  def change$/;"	f	class:CreateNotifications
 change	db/migrate/20150926031554_create_languages.rb	/^  def change$/;"	f	class:CreateLanguages
 change	db/migrate/20150927042900_add_avatar_to_users.rb	/^  def change$/;"	f	class:AddAvatarToUsers
+channel_params	app/controllers/channels_controller.rb	/^    def channel_params$/;"	f	class:ChannelsController
 create	app/controllers/posts_controller.rb	/^  def create$/;"	f	class:PostsController
 create	app/controllers/user_sessions_controller.rb	/^  def create$/;"	f	class:UserSessionsController
 current_user	app/controllers/application_controller.rb	/^  def current_user$/;"	f	class:ApplicationController
@@ -39,14 +47,20 @@ edit	app/controllers/posts_controller.rb	/^  def edit$/;"	f	class:PostsControlle
 friendship_params	app/controllers/friendships_controller.rb	/^    def friendship_params$/;"	f	class:FriendshipsController
 index	app/controllers/friendships_controller.rb	/^  def index$/;"	f	class:FriendshipsController
 index	app/controllers/posts_controller.rb	/^  def index$/;"	f	class:PostsController
+is_contact?	app/models/user.rb	/^  def is_contact?(user_id)$/;"	f	class:User
+language_names	app/models/user.rb	/^  def language_names$/;"	f	class:User
+new	app/controllers/channels_controller.rb	/^  def new$/;"	f	class:ChannelsController
 new	app/controllers/posts_controller.rb	/^  def new$/;"	f	class:PostsController
 new	app/controllers/user_sessions_controller.rb	/^  def new$/;"	f	class:UserSessionsController
+online?	app/models/user.rb	/^  def online?$/;"	f	class:User
 post_params	app/controllers/posts_controller.rb	/^    def post_params$/;"	f	class:PostsController
 remove	app/controllers/friendships_controller.rb	/^  def remove$/;"	f	class:FriendshipsController
 require_no_user	app/controllers/application_controller.rb	/^  def require_no_user$/;"	f	class:ApplicationController
 require_user	app/controllers/application_controller.rb	/^  def require_user$/;"	f	class:ApplicationController
+set_channel	app/controllers/channels_controller.rb	/^    def set_channel$/;"	f	class:ChannelsController
 set_friend	app/controllers/friendships_controller.rb	/^    def set_friend$/;"	f	class:FriendshipsController
 set_post	app/controllers/posts_controller.rb	/^    def set_post$/;"	f	class:PostsController
 show	app/controllers/posts_controller.rb	/^  def show$/;"	f	class:PostsController
+unread_notifications_count	app/models/user.rb	/^  def unread_notifications_count$/;"	f	class:User
 update	app/controllers/posts_controller.rb	/^  def update$/;"	f	class:PostsController
 user_session_params	app/controllers/user_sessions_controller.rb	/^    def user_session_params$/;"	f	class:UserSessionsController

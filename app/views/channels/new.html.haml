@@ -1,0 +1,8 @@
+%h1 Send a new message
+= render "form"
+%ul#chat
+  - @channel.chat_messages.each do |message|
+    %li
+      = message.created_at
+      = ":"
+      = message.message
