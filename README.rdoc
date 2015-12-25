@@ -1,4 +1,4 @@
 == This is a test app
 
-* start chat server `rackup config.ru -E development -s thin`
-* start rails server `rails s`
+* start chat server <pre>rackup config.ru -E development -s thin</pre>
+* start rails <pre>server rails s</pre>
