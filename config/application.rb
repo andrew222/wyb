@@ -1,4 +1,5 @@
 require File.expand_path('../boot', __FILE__)
+require 'faye'
 
 require 'rails/all'
 
@@ -26,9 +27,6 @@ module Waiyubang
     # config for authlogic
     config.gem = 'authlogic'
     config.middleware.delete Rack::Lock
-    config.middleware.use FayeRails::Middleware, mount: '/faye', :timeout => 25 do
-      map '/channels/**' => ChatsController
-      map :default => :block
-    end
+    config.middleware.use FayeRails::Middleware, mount: '/faye', :timeout => 25
   end
 end

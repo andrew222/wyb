@@ -1,19 +1,17 @@
 client = new Faye.Client('/faye')
 
-client.subscribe '/chat/1', (payload)->
-  time = moment(payload.created_at)
-  # You probably want to think seriously about XSS here:
-  $('ul#chat').append("<li>#{time} : #{payload.message}</li>")
+client.subscribe '/channels/new', (payload)->
+  console.log(payload)
+  $('ul#chat').append("<li>#{payload.created_at} : #{payload.message}</li>")
 
 $(document).ready ->
   $form = $('form.channel')
   input = $form.find('#message')
   button = $('.actions button')
   $form.submit (event) ->
-    alert("test")
     button.attr('disabled', 'disabled')
     button.val('Posting...')
-    publication = client.publish '/chat/1',
+    publication = client.publish '/channels/new',
       message: input.val()
       created_at: new Date()
     publication.callback ->
@@ -26,5 +24,4 @@ $(document).ready ->
     event.preventDefault()
     false
 
-# in case anyone wants to play with the inspector.
 window.client = client
